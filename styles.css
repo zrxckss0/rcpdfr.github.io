@@ -31,11 +31,11 @@ body {
 .hero {
   min-height: 90vh;
   position: relative;
-  background-image:
-    linear-gradient(110deg, rgba(7, 11, 21, 0.92), rgba(7, 11, 21, 0.5)),
-    url('https://tr.rbxcdn.com/180DAY-cfef647db3e2f8d3899c97b3f80382bd/768/432/Image/Webp/noFilter');
-  background-size: cover;
-  background-position: center;
+  background:
+    linear-gradient(110deg, rgba(7, 11, 21, 0.92), rgba(7, 11, 21, 0.72)),
+    radial-gradient(circle at 25% 30%, rgba(46, 167, 255, 0.14), transparent 38%),
+    radial-gradient(circle at 78% 70%, rgba(255, 63, 70, 0.14), transparent 34%),
+    #050913;
   border-bottom: 1px solid var(--line);
 }
 
@@ -181,7 +181,7 @@ h1 {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
@@ -197,6 +197,25 @@ h1 {
 
 .stat-card {
   padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stat-icon {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(46, 167, 255, 0.35);
+  background: rgba(46, 167, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon img {
+  width: 1rem;
+  height: 1rem;
 }
 
 .stat-card p {
@@ -206,7 +225,7 @@ h1 {
 }
 
 .stat-card h2 {
-  margin: 0.35rem 0 0;
+  margin: 0.1rem 0 0;
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
@@ -311,6 +330,23 @@ h1 {
 
 .offer-card-cta {
   background: linear-gradient(180deg, rgba(25, 38, 63, 0.95), rgba(11, 17, 29, 0.95));
+}
+
+.offer-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.65rem;
+}
+
+.offer-icon img {
+  width: 1rem;
+  height: 1rem;
 }
 
 .footer {
