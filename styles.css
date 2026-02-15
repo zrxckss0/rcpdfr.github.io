@@ -100,14 +100,6 @@ body {
   max-width: 860px;
 }
 
-.kicker {
-  margin: 0;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--blue);
-  font-weight: 700;
-}
-
 h1 {
   font-size: clamp(2rem, 5vw, 3.4rem);
   line-height: 1.1;
@@ -121,7 +113,7 @@ h1 {
 }
 
 .hero-cta {
-  margin-top: 1.8rem;
+  margin-top: 1.2rem;
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
@@ -166,12 +158,16 @@ h1 {
   border-radius: 999px;
   width: 2.2rem;
   height: 2.2rem;
-  font-size: 1rem;
   background: rgba(255, 255, 255, 0.04);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.socials a img {
+  width: 1rem;
+  height: 1rem;
 }
 
 .socials a:hover {
@@ -192,7 +188,7 @@ h1 {
 .stat-card,
 .division-card,
 .pass-card,
-.join,
+.offer-card,
 .gallery-grid img {
   background: linear-gradient(180deg, rgba(18, 26, 43, 0.95), rgba(11, 17, 29, 0.95));
   border: 1px solid var(--line);
@@ -222,7 +218,7 @@ h1 {
 .divisions h3,
 .gamepasses h3,
 .gallery h3,
-.join h3 {
+.why-join h3 {
   margin: 0 0 0.8rem;
   font-size: clamp(1.35rem, 3vw, 2rem);
 }
@@ -230,7 +226,7 @@ h1 {
 .about p,
 .division-card p,
 .pass-card p,
-.join p {
+.offer-card p {
   color: var(--muted);
   line-height: 1.65;
 }
@@ -241,23 +237,33 @@ h1 {
 }
 
 .card-grid,
-.pass-grid {
+.pass-grid,
+.offer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+
+.card-grid {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .pass-grid {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.offer-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .division-card,
-.pass-card {
+.pass-card,
+.offer-card {
   padding: 1rem;
 }
 
 .division-card h4,
-.pass-card h4 {
+.pass-card h4,
+.offer-card h4 {
   margin: 0 0 0.5rem;
 }
 
@@ -267,13 +273,14 @@ h1 {
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.pass-card:hover {
+.pass-card:hover,
+.offer-card:hover {
   transform: translateY(-3px);
   border-color: rgba(46, 167, 255, 0.5);
 }
 
 .gallery {
-  padding-bottom: 3rem;
+  padding-bottom: 2.4rem;
 }
 
 .gallery-grid {
@@ -294,9 +301,16 @@ h1 {
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
 }
 
-.join {
-  padding: 1.4rem;
+.why-join {
   margin-bottom: 2.8rem;
+}
+
+.offer-card {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.offer-card-cta {
+  background: linear-gradient(180deg, rgba(25, 38, 63, 0.95), rgba(11, 17, 29, 0.95));
 }
 
 .footer {
@@ -324,7 +338,8 @@ h1 {
 }
 
 @media (max-width: 1000px) {
-  .card-grid {
+  .card-grid,
+  .offer-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -343,7 +358,8 @@ h1 {
   .card-grid,
   .pass-grid,
   .gallery-grid,
-  .stats {
+  .stats,
+  .offer-grid {
     grid-template-columns: 1fr;
   }
 
