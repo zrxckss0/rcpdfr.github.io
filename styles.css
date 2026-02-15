@@ -1,0 +1,369 @@
+:root {
+  --bg: #0b111d;
+  --surface: #121a2b;
+  --text: #eaf2ff;
+  --muted: #a9b8d3;
+  --blue: #2ea7ff;
+  --red: #ff3f46;
+  --line: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #070b15 0%, var(--bg) 40%, #090f1b 100%);
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 90vh;
+  position: relative;
+  background-image:
+    linear-gradient(110deg, rgba(7, 11, 21, 0.92), rgba(7, 11, 21, 0.5)),
+    url('https://tr.rbxcdn.com/180DAY-cfef647db3e2f8d3899c97b3f80382bd/768/432/Image/Webp/noFilter');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 12%, rgba(46, 167, 255, 0.2), transparent 40%),
+    radial-gradient(circle at 8% 80%, rgba(255, 63, 70, 0.2), transparent 35%);
+}
+
+.nav,
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.logo-blue {
+  color: var(--blue);
+}
+
+.logo-red {
+  color: var(--red);
+}
+
+.logo-colon {
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.hero-content {
+  padding: 5.4rem 0 5rem;
+  max-width: 860px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0.7rem 0 1rem;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 0.75rem 1.1rem;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue), #0f86da);
+  color: #001428;
+  box-shadow: 0 10px 24px rgba(46, 167, 255, 0.3);
+}
+
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.socials a img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.socials a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(46, 167, 255, 0.5);
+  background: rgba(46, 167, 255, 0.12);
+}
+
+.stats {
+  margin-top: -2.2rem;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-card,
+.division-card,
+.pass-card,
+.offer-card,
+.gallery-grid img {
+  background: linear-gradient(180deg, rgba(18, 26, 43, 0.95), rgba(11, 17, 29, 0.95));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.stat-card {
+  padding: 1rem 1.2rem;
+}
+
+.stat-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.stat-card h2 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.about {
+  padding: 3rem 0 2rem;
+}
+
+.about h3,
+.divisions h3,
+.gamepasses h3,
+.gallery h3,
+.why-join h3 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.about p,
+.division-card p,
+.pass-card p,
+.offer-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.divisions,
+.gamepasses {
+  padding: 0.3rem 0 2.2rem;
+}
+
+.card-grid,
+.pass-grid,
+.offer-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.pass-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.offer-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.division-card,
+.pass-card,
+.offer-card {
+  padding: 1rem;
+}
+
+.division-card h4,
+.pass-card h4,
+.offer-card h4 {
+  margin: 0 0 0.5rem;
+}
+
+.pass-card {
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.pass-card:hover,
+.offer-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(46, 167, 255, 0.5);
+}
+
+.gallery {
+  padding-bottom: 2.4rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+}
+
+.why-join {
+  margin-bottom: 2.8rem;
+}
+
+.offer-card {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.offer-card-cta {
+  background: linear-gradient(180deg, rgba(25, 38, 63, 0.95), rgba(11, 17, 29, 0.95));
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 1rem 0 1.6rem;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1000px) {
+  .card-grid,
+  .offer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pass-grid,
+  .gallery-grid,
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-grid,
+  .pass-grid,
+  .gallery-grid,
+  .stats,
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding-top: 4.5rem;
+  }
+}
